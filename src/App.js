@@ -15,7 +15,7 @@ function App() {
     // console.log(data);
     // setData(data);
 
-    //==========Async awit error handling===========
+    //==========GET Async awit error handling===========
     // try {
     //   const result = await axios.get(
     //     "https://jsonplaceholder.typicode.com/todos"
@@ -39,34 +39,72 @@ function App() {
     //     });
     // };
 
-    const postData = async () => {
-      //========== POST Async awit error handling===========
-      // try {
-      //   const data = {
-      //     title: "NJ is the Best Striking in PSG",
+    //const postData = async () => {
+    //========== POST Async awit error handling===========
+    // try {
+    //   const data = {
+    //     title: "NJ is the Best Striking in PSG",
+    //     completed: true,
+    //   };
+    //   const response = await axios.post(
+    //     "https://jsonplaceholder.typicode.com/todos",
+    //     data
+    //   );
+    //   console.log(response.data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    // =================POST with Promises(.then)==========
+    // axios({
+    //   method: "POST",
+    //   url: "https://jsonplaceholder.typicode.com/todos",
+    //   data: { title: "PSG is the best team", completed: true },
+    // }).then((response) => {
+    //   const { data } = response;
+    //   console.log(data);
+    // });
+    // };
+
+    const UpdateData = async () => {
+      //=========== PUT with Async await=========
+      // const response = await axios.put(
+      //   "https://jsonplaceholder.typicode.com/todos/1",
+      //   {
+      //     title: "FCB is the Best team",
       //     completed: true,
-      //   };
-      //   const response = await axios.post(
-      //     "https://jsonplaceholder.typicode.com/todos",
-      //     data
-      //   );
-      //   console.log(response.data);
-      // } catch (error) {
-      //   console.log(error);
-      // }
-      // =================POST with Promises(.then)==========
-      // axios({
-      //   method: "POST",
-      //   url: "https://jsonplaceholder.typicode.com/todos",
-      //   data: { title: "PSG is the best team", completed: true },
-      // }).then((response) => {
-      //   const { data } = response;
-      //   console.log(data);
-      // });
+      //   }
+      // );
+      // const { data } = response;
+      // console.log(response);
+      //==========PUT Async awit error handling===========
+      //   try {
+      //     const response = await axios.put(
+      //       "https://jsonplaceholder.typicode.com/todos/1",
+      //       {
+      //         title: "FCB is the best team",
+      //         completed: true,
+      //       }
+      //     );
+      //     const { data } = await response;
+      //     console.log(data);
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+      // =================PUT with Promises(.then)==========
+      // axios
+      //   .put("https://jsonplaceholder.typicode.com/todos/1", {
+      //     title: "FCB is the best team",
+      //     completed: true,
+      //   })
+      //   .then((response) => {
+      //     const { data } = response;
+      //     console.log(data);
+      //   });
     };
 
     // fetchData();
-    postData();
+    // postData();
+    UpdateData();
   }, []);
 
   return (
