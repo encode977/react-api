@@ -65,46 +65,75 @@ function App() {
     // });
     // };
 
-    const UpdateData = async () => {
-      //=========== PUT with Async await=========
-      // const response = await axios.put(
-      //   "https://jsonplaceholder.typicode.com/todos/1",
-      //   {
-      //     title: "FCB is the Best team",
-      //     completed: true,
-      //   }
+    // const UpdateData = async () => {
+    //=========== PUT with Async await=========
+    // const response = await axios.put(
+    //   "https://jsonplaceholder.typicode.com/todos/1",
+    //   {
+    //     title: "FCB is the Best team",
+    //     completed: true,
+    //   }
+    // );
+    // const { data } = response;
+    // console.log(response);
+    //==========PUT Async awit error handling===========
+    //   try {
+    //     const response = await axios.put(
+    //       "https://jsonplaceholder.typicode.com/todos/1",
+    //       {
+    //         title: "FCB is the best team",
+    //         completed: true,
+    //       }
+    //     );
+    //     const { data } = await response;
+    //     console.log(data);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // =================PUT with Promises(.then)==========
+    // axios
+    //   .put("https://jsonplaceholder.typicode.com/todos/1", {
+    //     title: "FCB is the best team",
+    //     completed: true,
+    //   })
+    //   .then((response) => {
+    //     const { data } = response;
+    //     console.log(data);
+    //   });
+    // };
+
+    const deleteData = async () => {
+      //=========== DELETE with Async await=========
+      // const response = await axios.delete(
+      //   "https://jsonplaceholder.typicode.com/todos/1"
       // );
-      // const { data } = response;
       // console.log(response);
-      //==========PUT Async awit error handling===========
-      //   try {
-      //     const response = await axios.put(
-      //       "https://jsonplaceholder.typicode.com/todos/1",
-      //       {
-      //         title: "FCB is the best team",
-      //         completed: true,
-      //       }
-      //     );
-      //     const { data } = await response;
-      //     console.log(data);
-      //   } catch (error) {
-      //     console.log(error);
-      //   }
-      // =================PUT with Promises(.then)==========
-      // axios
-      //   .put("https://jsonplaceholder.typicode.com/todos/1", {
-      //     title: "FCB is the best team",
-      //     completed: true,
-      //   })
-      //   .then((response) => {
-      //     const { data } = response;
-      //     console.log(data);
-      //   });
+      //==========DELETE Async awit error handling===========
+      // try {
+      //   const res = await axios.delete(
+      //     "https://jsonplaceholder.typicode.com/todos/1"
+      //   );
+      //   console.log(res);
+      // } catch (error) {
+      //   console.log(error);
+      // }
+
+      // =================DELETE with Promises(.then)==========
+      axios
+        .delete("https://jsonplaceholder.typicode.com/todos/1")
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     };
 
     // fetchData();
     // postData();
-    UpdateData();
+    //UpdateData();
+
+    deleteData();
   }, []);
 
   return (
